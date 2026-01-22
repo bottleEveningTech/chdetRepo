@@ -19,7 +19,7 @@ export class MessagesComponent {
     return 'Messages Component Debug Output';
   }
 
-  onAddMessage(message: string) {
-    this.messages.update((oldMessages) => [...oldMessages, message]);
-  }
+//   onAddMessage(message: string) {
+//     this.messages.update((oldMessages) => [...oldMessages, message]);
+//   }
 }
