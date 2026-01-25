@@ -13,17 +13,18 @@ import { InfoMessageComponent } from '../info-message/info-message.component';
 export class CounterComponent implements OnInit {
   count = signal(0);
 
-  private zone = inject(NgZone);
+  // private zone = inject(NgZone);
   ngOnInit(): void {
+    //set time out does not work with no signal and no zone js.
     setTimeout(() => {
       console.log('timeout run')
       this.count.set(-1);
     }, 4000);
-    this.zone.runOutsideAngular(() => {
+    // this.zone.runOutsideAngular(() => {
       setTimeout(() => {
         console.log('Timer expired'); //without zone pollution avoiding, cd runs here too.
       }, 5000);
-    })
+    // })
   }
 
 
