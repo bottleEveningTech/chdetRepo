@@ -12,7 +12,11 @@ export class MessagesListComponent {
   // messages = input.required<string[]>();
 
   private messageService = inject(MessagesService);
-  messages = this.messageService.allMessages;
+  // messages = this.messageService.allMessages;
+
+  get messages(){
+    return this.messageService.allMessages;
+  }
   get debugOutput() {
     console.log('[MessagesList] "debugOutput" binding re-evaluated.');
     return 'MessagesList Component Debug Output';
