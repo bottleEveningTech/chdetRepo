@@ -12,7 +12,7 @@ import { NewMessageComponent } from './new-message/new-message.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MessagesComponent {
-  messages = signal<string[]>([]);
+  // messages = signal<string[]>([]);
 
   get debugOutput() {
     console.log('[Messages] "debugOutput" binding re-evaluated.');
